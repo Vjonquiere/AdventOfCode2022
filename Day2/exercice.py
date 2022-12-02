@@ -32,7 +32,7 @@ def question_1(parsed_data:list) -> tuple:
 
     return (elf_sum, my_sum)
 
-def question_2(parsed_data:list):
+def question_2(parsed_data:list) -> tuple:
     elf_sum = 0
     my_sum = 0
     for i in range(len(parsed_data)):
