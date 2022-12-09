@@ -12,8 +12,6 @@ class Stack:
 
     def __str__(self) -> str:
         string = ""
-        #for i in range(len(self.stack)-1, -1, -1):
-        #print("stack ", self.stack)
         for i in range(len(self.stack)):
             string += " -> " + self.stack[i] 
             
@@ -39,7 +37,6 @@ def get_default_stacks(parsed_data:list) -> tuple:
             elt = parsed_data[counter][i:i+SLICE_SIZE]
             if (elt != " "*SLICE_SIZE and i!= 32):
                 stacks[int(i/SLICE_SIZE)].push(elt[1])
-                #print(stacks[int(i/SLICE_SIZE)])
             elif (elt != " "*(SLICE_SIZE-1)+"\n" and i==32):
                 stacks[int(i/SLICE_SIZE)].push(elt[1])
             else:
